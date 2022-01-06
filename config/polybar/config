@@ -23,7 +23,7 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #7883BF
+primary = #D93D3D
 secondary = #ffffff
 alert = #ff0000
 
@@ -55,7 +55,7 @@ module-margin-right = 2
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 
-font-0 = Cozette:pixelsize=9;1
+font-0 = Hack Regular:pixelsize=9;1
 font-1 = fixed:pixelsize=9;1
 font-2 = siji:pixelsize=10;1
 
