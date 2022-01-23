@@ -119,28 +119,28 @@ bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1|"
-set $ws2 "2|"
-set $ws3 "3|"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10|"
+set $ws1 "[1|]"
+set $ws2 "[2|]"
+set $ws3 "[3|]"
+set $ws4 "[4]"
+set $ws5 "[5]"
+set $ws6 "[6]"
+set $ws7 "[7]"
+set $ws8 "[8]"
+set $ws9 "[9]"
+set $ws10 "[10|]"
 
 # switch to workspace
-bindsym $mod+mod2+KP_1 workspace number $ws1
-bindsym $mod+mod2+KP_2 workspace number $ws2
-bindsym $mod+mod2+KP_3 workspace number $ws3
-bindsym $mod+mod2+KP_4 workspace number $ws4
-bindsym $mod+mod2+KP_5 workspace number $ws5
-bindsym $mod+mod2+KP_6 workspace number $ws6
-bindsym $mod+mod2+KP_7 workspace number $ws7
-bindsym $mod+mod2+KP_8 workspace number $ws8
-bindsym $mod+mod2+KP_9 workspace number $ws9
-bindsym $mod+mod2+KP_0 workspace number $ws10
+bindsym $mod+mod2+KP_1 workspace $ws1
+bindsym $mod+mod2+KP_2 workspace $ws2
+bindsym $mod+mod2+KP_3 workspace $ws3
+bindsym $mod+mod2+KP_4 workspace $ws4
+bindsym $mod+mod2+KP_5 workspace $ws5
+bindsym $mod+mod2+KP_6 workspace $ws6
+bindsym $mod+mod2+KP_7 workspace $ws7
+bindsym $mod+mod2+KP_8 workspace $ws8
+bindsym $mod+mod2+KP_9 workspace $ws9
+bindsym $mod+mod2+KP_0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+mod2+Shift+KP_1 move container to workspace number $ws1
@@ -227,7 +227,6 @@ bindsym $mod+Shift+q exec kitty bpytop
 exec_always feh --bg-fill /home/jp/Pictures/_i3bg.jpg
 #exec_always xbanish
 exec_always numlockx
-exec udiskie -a
 #exec --no-startup-id kitty 
 #exec --no-startup-id pasystray
 exec --no-startup-id discord --start-minimized
@@ -241,7 +240,8 @@ exec --no-startup-id discord --start-minimized
 #exec_always g512-led -g functions AEFEFF
 #exec_always g512-led -g modifiers AEFEFF
 #exec_always g512-led -g indicators 4FBDBA
-exec_always --no-startup-id g512-led -a 07b363 #ff0000
+exec_always g512-led -a 2BAD27
+exec_always 
 
 
 
