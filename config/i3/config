@@ -241,7 +241,7 @@ exec --no-startup-id discord --start-minimized
 #exec_always g512-led -g functions AEFEFF
 #exec_always g512-led -g modifiers AEFEFF
 #exec_always g512-led -g indicators 4FBDBA
-exec_always --no-startup-id g512-led -a 07b363 #ff0000
+exec_always --no-startup-id g512-led -a ffff00 #ff0000
 
 
 
@@ -266,4 +266,4 @@ client.urgent           $ubg        $ubg           $txt      $bg
 
 #	the following disables window titlebars for gaps
 for_window [class=".*"] border pixel 0
-for_window [floating] move position 0 0
+#for_window [floating] move position 0 0
