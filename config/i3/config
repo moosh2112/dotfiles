@@ -68,6 +68,7 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+x exec --no-startup-id dmenu_run -c -x -l 5
 #-c -x -l 10
+#bindsym $mod+x exec --no-startup-id rofi -show run -matching prefix -fixed-num-lines 5 -show-icons 
 #bindsym $mod+x exec --no-startup-id rofi -show run -theme gruvbox-dark-soft -icon-theme "Papirus" -show-icons 
 #-font "Cozette 9" 
 #bindsym $mod+d exec rofi -show run -lines 1 -eh 2 -width 20 -padding 200 -opacity "85" -bw 0 -bc "$bg" -bg "$bg" -fg "$txt" -hlbg "$bg" -hlfg "#ffffff" -font "Ubuntu 12"
@@ -202,7 +203,7 @@ gaps inner 6
 gaps outer 2
 
 #	the following disables window titlebars for gaps
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 #for_window [floating] move position 0 0
 
 ################## BAR ##################
