@@ -1,0 +1,43 @@
+URxvt.scrollBar: false
+
+URxvt.font:xft:Cozette
+
+! special
+URxvt.foreground:   #ffffff
+URxvt.background:   #000000
+URxvt.cursorColor:  #ffffff
+
+! black
+URxvt.color0:       #000000
+URxvt.color8:       #ff6060
+
+! red
+URxvt.color1:       #101010
+URxvt.color9:       #ffc154
+
+! green
+URxvt.color2:       #202020
+URxvt.color10:      #fff253
+
+! yellow
+URxvt.color3:       #303030
+URxvt.color11:      #7dff65
+
+! blue
+URxvt.color4:       #404040
+URxvt.color12:      #5d59ff
+
+! magenta
+URxvt.color5:       #505050
+URxvt.color13:      #9161ff
+
+! cyan
+URxvt.color6:       #606060
+URxvt.color14:      #bd6bff
+
+! white
+URxvt.color7:       #707070
+URxvt.color15:      #ffffff
+
+
+
