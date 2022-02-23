@@ -27,6 +27,9 @@ font pango:Hack 11
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+#start compositor as soon as possible
+exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf 
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -179,11 +182,12 @@ bindsym $mod+r mode "resize"
 ################## WINDOW SHIT ##################
 
 #	Compositor
-exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf 
+#exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf 
 
 #	colors
 set $bg		  #ffffff 
 #9fd6c1
+set $sp           #63e4ff
 set $ibg          #000000
 set $txt          #000000
 set $itxt         #ffffff
@@ -198,8 +202,8 @@ client.focused_inactive $ibg        $ibg           $itxt     $bg
 client.urgent           $ubg        $ubg           $txt      $bg
 
 #	gaps
-#gaps inner 6
-#gaps outer 2
+#gaps inner 8
+#gaps outer 4
 
 #	the following disables window titlebars for gaps
 for_window [class=".*"] border pixel 1
@@ -215,7 +219,7 @@ bar
 #	font pango:Inconsolata 11
 	colors 
 	{
-		background #000000
+		background $ibg
 		separator $itxt
 		#                  border      background       text
 		focused_workspace  $bg         $bg              $ibg
