@@ -204,8 +204,8 @@ client.focused_inactive $ibg        $ibg           $itxt     $bg
 client.urgent           $ubg        $ubg           $txt      $bg
 
 #	gaps
-gaps inner 6
-gaps outer 2
+#gaps inner 6
+#gaps outer 2
 
 #	the following disables window titlebars for gaps
 for_window [class=".*"] border pixel 1
@@ -215,26 +215,26 @@ for_window [class=".*"] border pixel 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar 
-#{
-#	status_command i3blocks -c /home/jp/.config/i3blocks/config/i3blocks.conf
-#	font pango:Ubuntu Regular 11
-#
-#	colors 
-#	{
-#		background $ibg
-#		separator $itxt
-#		#                  border      background       text
-#		focused_workspace  $bg         $bg              $ibg
-#		inactive_workspace $ibg        $ibg             $bg
-#		urgent_workspace   $ubg        $ubg             $ibg
-#	}
-#}
+bar 
+{
+	status_command i3blocks -c /home/jp/.config/i3blocks/config/i3blocks.conf
+	font pango:Inconsolata 14
+
+	colors 
+	{
+		background $ibg
+		separator $itxt
+		#                  border      background       text
+		focused_workspace  $bg         $bg              $ibg
+		inactive_workspace $ibg        $ibg             $bg
+		urgent_workspace   $ubg        $ubg             $ibg
+	}
+}
 
 ################## EXTRA ##################
 
 #	polybar
-exec_always --no-startup-id /home/jp/.config/polybar/launch.sh
+#exec_always --no-startup-id /home/jp/.config/polybar/launch.sh
 
 #	assigns
 #assign [class=""] $ws1
@@ -253,7 +253,7 @@ bindsym $mod+Shift+s exec maim --select --noopengl | xclip -selection clipboard 
 bindsym $mod+Shift+q exec urxvt htop
 
 #	execs
-exec_always feh --bg-fill /media/spinvault/_photos/bento.png
+exec_always feh --bg-fill /home/jp/Pictures/thinking.png
 #exec_always xbanish
 exec_always numlockx
 #exec udiskie -a
