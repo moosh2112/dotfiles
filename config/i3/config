@@ -70,7 +70,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+grave exec --no-startup-id dmenu_run -c -x -l 5
+bindsym $mod+grave exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -c -x -i -l 5"
 #-c -x -l 10
 #bindsym $mod+x exec --no-startup-id rofi -show run -matching prefix -fixed-num-lines 5 -show-icons 
 #bindsym $mod+x exec --no-startup-id rofi -show run -theme gruvbox-dark-soft -icon-theme "Papirus" -show-icons 
