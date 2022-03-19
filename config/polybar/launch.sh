@@ -2,5 +2,6 @@
 
 killall -q polybar
 
-polybar mybar
-echo "Bar launched..."
+polybar bar1 &&
+polybar bar2
+echo "They should both be there!"
