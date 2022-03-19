@@ -27,8 +27,11 @@ font pango:Hack 11
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+#PICOM IS HERE PICOM IS HERE PICOM IS HERE!!!!!!!!!!!!!!!!!
+#Don't add it anywhere else or things go bad!
+
 #start compositor as soon as possible
-exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf 
+exec_always --no-startup-id picom --daemon --experimental-backends --config /home/jp/.config/picom/picom.conf 
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -70,12 +73,9 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+grave exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -c -x -i -l 5"
+bindsym $mod+grave exec --no-startup-id j4-dmenu-desktop --no-generic --dmenu="dmenu -c -i -l 5"
 #-c -x -l 10
-#bindsym $mod+x exec --no-startup-id rofi -show run -matching prefix -fixed-num-lines 5 -show-icons 
-#bindsym $mod+x exec --no-startup-id rofi -show run -theme gruvbox-dark-soft -icon-theme "Papirus" -show-icons 
-#-font "Cozette 9" 
-#bindsym $mod+d exec rofi -show run -lines 1 -eh 2 -width 20 -padding 200 -opacity "85" -bw 0 -bc "$bg" -bg "$bg" -fg "$txt" -hlbg "$bg" -hlfg "#ffffff" -font "Ubuntu 12"
+#bindsym $mod+grave exec rofi -show run -show-icons -icon-theme "Papirus-Dark" -show-icons -matching prefix -theme "Arc-Dark" -font "Ubuntu Mono 10"
 
 ################## LAYOUTS & FOCUS ##################
 
@@ -183,8 +183,7 @@ bindsym $mod+r mode "resize"
 
 ################## WINDOW SHIT ##################
 
-#	Compositor
-#exec_always --no-startup-id picom --experimental-backends --config ~/.config/picom/picom.conf 
+#NOTE: COMPOSITOR IS ABOVE IN ORDER TO BE STARTED AS SOON AS POSSIBLE
 
 #	colors
 set $bg		  #ffffff 
@@ -204,8 +203,8 @@ client.focused_inactive $ibg        $ibg           $itxt     $extra
 client.urgent           $ubg        $ubg           $txt      $extra
 
 #	gaps
-#gaps inner 6
-#gaps outer 2
+gaps inner 6
+gaps outer 6
 
 #	the following disables window titlebars for gaps
 for_window [class=".*"] border pixel 1
@@ -215,27 +214,27 @@ for_window [class=".*"] border pixel 1
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar 
-{
-	
-	status_command i3blocks -c /home/jp/.config/i3blocks/config/i3blocks.conf
-	font pango:Ubuntu Mono, FontAwesome 12
-	position top
-	colors 
-	{
-		background $ibg
-		separator $itxt
-		#                  border      background       text
-		focused_workspace  $bg         $bg              $ibg
-		inactive_workspace $ibg        $ibg             $bg
-		urgent_workspace   $ubg        $ubg             $ibg
-	}
-}
+#bar 
+#{
+#	
+#	status_command i3blocks -c /home/jp/.config/i3blocks/config/i3blocks.conf
+#	font pango:Ubuntu Mono, FontAwesome 12
+#	position top
+#	colors 
+#	{
+#		background $ibg
+#		separator $itxt
+#		#                  border      background       text
+#		focused_workspace  $bg         $bg              $ibg
+#		inactive_workspace $ibg        $ibg             $bg
+#		urgent_workspace   $ubg        $ubg             $ibg
+#	}
+#}
 
 ################## EXTRA ##################
 
 #	polybar
-#exec_always --no-startup-id /home/jp/.config/polybar/launch.sh
+exec_always --no-startup-id /home/jp/.config/polybar/launch.sh
 
 #	assigns
 #assign [class=""] $ws1
@@ -254,13 +253,13 @@ bindsym $mod+Shift+s exec maim --select --noopengl | xclip -selection clipboard 
 bindsym $mod+Shift+q exec urxvt -e htop
 
 #	execs
-exec_always feh --bg-fill /home/jp/Pictures/thinking.png
+exec_always feh --bg-fill /home/jp/Pictures/cerise.jpg 
 #exec_always xbanish
 exec_always numlockx
 #exec udiskie -a
 exec_always dunst
 #exec --no-startup-id kitty 
-exec --no-startup-id pasystray
+#exec --no-startup-id pasystray
 #exec --no-startup-id discord --start-minimized
 #exec --no-startup-id steam -silent
 #exec --no-startup-id solaar 
