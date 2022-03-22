@@ -272,3 +272,7 @@ exec_always dunst
 #exec_always g512-led -g modifiers AEFEFF
 #exec_always g512-led -g indicators 4FBDBA
 #exec_always --no-startup-id g512-led -a ffff00 #ff0000
+
+#last thing to occur, resets for any issues...
+#essentially double resets the wm
+exec --no-startup-id i3-msg restart
