@@ -249,7 +249,7 @@ bindsym $mod+e exec pcmanfm
 #for i3blocks keyindic
 #bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 #bindsym $mod+Shift+s exec maim --select --noopengl | tee /media/spinvault/_photos/screenshots/$(date +%s).jpg 
-bindsym $mod+Shift+s exec maim --select --noopengl | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec maim --select --noopengl  | xclip -selection clipboard -t image/png
 bindsym $mod+Shift+q exec urxvt -e htop
 
 #	execs
