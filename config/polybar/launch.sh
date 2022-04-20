@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 
-killall -q polybar
+killall polybar
 
-polybar bar1 &&
-polybar bar2
+polybar --config=/home/jp/.config/polybar/config.ini bar1
+polybar --config=/home/jp/.config/polybar/config.ini bar2
+#polybar --config=/home/jp/.config/polybar/config.ini bar2
 echo "They should both be there!"
