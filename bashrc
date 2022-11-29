@@ -88,9 +88,6 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -111,24 +108,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-#
-# ~/.bashrc
-#
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
-
-alias ll='ls -la'
-alias la='ls -a'
-alias cl='clear'
+alias ud='sudo apt update'
+alias ug='sudo apt upgrade'
+alias vpn='nordvpn connect'
 alias ar='sudo apt autoremove'
-alias ud='sudo apt update && sudo apt upgrade'
-#alias spotify='flatpak run com.spotify.Client'
-#alias discord='flatpak run com.discordapp.Discord'
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-#if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION
+alias rrr='sudo reboot'
+alias vpndc='nordvpn disconnect'
+alias ll='ls -lha'
+alias cl='clear'
+alias dlaud="yt-dlp -f 'ba' -x --audio-format wav"
